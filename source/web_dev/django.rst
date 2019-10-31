@@ -147,3 +147,12 @@ Python 代码。可以使用 django cms 的 admin
 
 关于 django cms
 ---------------
+
+参考
+----
+
+-  `Django Web 框架`_
+-  `Django教程`_
+
+.. _Django Web 框架: https://developer.mozilla.org/zh-CN/docs/learn/Server-side/Django
+.. _Django教程: https://www.w3cschool.cn/django/
