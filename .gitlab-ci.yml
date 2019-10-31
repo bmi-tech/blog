@@ -34,4 +34,6 @@ push2github_blogs:
   when: on_success
   script:
     - ( test ! -z "$githubURL" -a ! -z "$githubUser" -a ! -z "$githubPWD" ) || ( echo "push2github failure [error=githubURL or githubUser or githubPWD undefined]" && exit 10 )
+    - git remote remove github || true
     - ./for-push2github.sh $githubURL $githubUser $githubPWD
+    - git remote remove github || true
