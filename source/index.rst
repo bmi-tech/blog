@@ -16,3 +16,9 @@ BMI 技术博客
     :caption: web 开发
 
     django 介绍 <web_dev/django>
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 语法规范
+
+    Markdown 规范 <syntax/markdown.md>
