@@ -28,7 +28,7 @@ deploy_blogs:
 
 push2github_blogs:
   image: dockerhub.bmi:5000/ubuntu16-expect-git
-  stage: deploy
+  stage: push2github
   only:
     - master
   when: on_success
