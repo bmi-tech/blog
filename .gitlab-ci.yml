@@ -1,0 +1,26 @@
+stages:
+  - build
+  - deploy
+
+build_blogs:
+  image: dockerhub.bmi:5000/sphinx-rtd
+  stage: build
+  only:
+    - master
+  artifacts:
+    paths:
+      - build
+  script:
+    - make html
+
+deploy_blogs:
+  image: dockerhub.bmi:5000/ubuntu16-expect
+  stage: deploy
+  only:
+    - master
+  when: on_success
+  dependencies:
+    - build_blogs
+  script:
+    - ( test ! -z "$machineURL" -a ! -z "$machinePWD" ) || ( echo "upload2machine failure [error=machineURL or machinePWD undefined]" && exit 10 )
+    - ./for-upload2machine.sh $machineURL $machinePWD
