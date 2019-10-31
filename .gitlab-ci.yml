@@ -37,3 +37,4 @@ push2github_blogs:
     - git remote remove github || true
     - ./for-push2github.sh $githubURL $githubUser $githubPWD
     - git remote remove github || true
+  retry: 2
