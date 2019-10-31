@@ -1,6 +1,7 @@
 stages:
   - build
   - deploy
+  - push2github
 
 build_blogs:
   image: dockerhub.bmi:5000/sphinx-rtd
@@ -24,3 +25,13 @@ deploy_blogs:
   script:
     - ( test ! -z "$machineURL" -a ! -z "$machinePWD" ) || ( echo "upload2machine failure [error=machineURL or machinePWD undefined]" && exit 10 )
     - ./for-upload2machine.sh $machineURL $machinePWD
+
+push2github_blogs:
+  image: dockerhub.bmi:5000/ubuntu16-expect-git
+  stage: deploy
+  only:
+    - master
+  when: on_success
+  script:
+    - ( test ! -z "$githubURL" -a ! -z "$githubUser" -a ! -z "$githubPWD" ) || ( echo "push2github failure [error=githubURL or githubUser or githubPWD undefined]" && exit 10 )
+    - ./for-push2github.sh $githubURL $githubUser $githubPWD
