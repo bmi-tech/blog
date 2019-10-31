@@ -1,20 +1,18 @@
-.. BMI Blog documentation master file, created by
-   sphinx-quickstart on Thu Oct 31 10:04:03 2019.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+BMI 技术博客
+===========
 
-Welcome to BMI Blog's documentation!
-====================================
+整理记录过去几年遇到的问题和解决方案, 以及相关知识体系的梳理.
+
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 1
+    :titlesonly:
+    :hidden:
 
+    主页 <self>
 
+.. toctree::
+    :maxdepth: 1
+    :caption: web 开发
 
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    django 介绍 <web_dev/django>
