@@ -1,9 +1,9 @@
 # Markdown 规范
 
 ```text
-    题目：Markdown 规范
-    作者：kiki
-    日期：2017/9/26
+题目：Markdown 规范
+作者：kiki
+日期：2017/9/26
 ```
 
 ## 编辑器
@@ -264,9 +264,9 @@ Markdown 官网[^markdown]
     # Markdown 规范
 
     ```text
-        题目：Markdown 规范
-        作者：kiki
-        日期：2017/9/26
+    题目：Markdown 规范
+    作者：kiki
+    日期：2017/9/26
     ```
 
     ## 编辑器
