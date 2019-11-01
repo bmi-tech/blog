@@ -4,7 +4,7 @@ set githubURL [lindex $argv 0]
 set githubUser [lindex $argv 1]
 set githubPWD [lindex $argv 2]
 spawn git remote add github $githubURL
-spawn git push -f github master:master
+spawn git push -f github remotes/origin/master:master
 set timeout 10
 expect "Username for 'https://github.com':"
 send "$githubUser\r"
