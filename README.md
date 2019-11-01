@@ -20,6 +20,7 @@
   - [从 Markdown 到 reStructuredTex](https://macplay.github.io/posts/cong-markdown-dao-restructuredtext/)
   - [reStructuredText入门](http://www.pythondoc.com/sphinx/rest.html)
   - 如果习惯用 Markdown，建议用 [pandoc](https://pandoc.org/try/?text=&from=markdown&to=rst) 一键转化即可
+- 可参考 [Sphinx 教程](source/web_dev/sphinx.md) 了解详细信息。
 
 ## 添加一篇文章
 
