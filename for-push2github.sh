@@ -10,8 +10,9 @@ expect "Username for 'https://github.com':"
 send "$githubUser\r"
 set timeout 10
 expect "Password for 'https://bmi-tech@github.com':"
-set timeout 100
+set timeout 1000
 send "$githubPWD\r"
-expect 100%
+expect "*To https://github.com/bmi-tech/blog.git"
+expect "*master -> master"
 set timeout 3
 expect eof
