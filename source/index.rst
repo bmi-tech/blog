@@ -17,6 +17,7 @@ BMI 技术博客
     :caption: web 开发
 
     django 介绍 <web_dev/django>
+    Sphinx 教程 <web_dev/sphinx>
 
 .. toctree::
     :maxdepth: 1
