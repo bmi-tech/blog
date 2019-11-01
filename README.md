@@ -3,6 +3,7 @@
 - [BMI 技术博客](#bmi-%e6%8a%80%e6%9c%af%e5%8d%9a%e5%ae%a2)
   - [问题讨论](#%e9%97%ae%e9%a2%98%e8%ae%a8%e8%ae%ba)
   - [博客管理](#%e5%8d%9a%e5%ae%a2%e7%ae%a1%e7%90%86)
+  - [添加一篇文章](#%e6%b7%bb%e5%8a%a0%e4%b8%80%e7%af%87%e6%96%87%e7%ab%a0)
     - [本地环境](#%e6%9c%ac%e5%9c%b0%e7%8e%af%e5%a2%83)
 
 ## 问题讨论
@@ -19,6 +20,13 @@
   - [从 Markdown 到 reStructuredTex](https://macplay.github.io/posts/cong-markdown-dao-restructuredtext/)
   - [reStructuredText入门](http://www.pythondoc.com/sphinx/rest.html)
   - 如果习惯用 Markdown，建议用 [pandoc](https://pandoc.org/try/?text=&from=markdown&to=rst) 一键转化即可
+
+## 添加一篇文章
+
+1. 在 `source` 目录创建对应目录和文件。
+2. 编辑文件保存。**建议使用 rst 格式**。
+3. 在 [source/index.rst 文件](source/index.rst) 为新文件选择位置。
+   1. 文件名可以不加后缀，暂时支持 md 和 rst 后缀。参见 [source/conf.py 文件](source/conf.py) 的 `source_suffix` 属性。
 
 ### 本地环境
 
