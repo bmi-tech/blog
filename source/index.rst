@@ -16,13 +16,13 @@ BMI 技术博客
     :maxdepth: 1
     :caption: web 开发
 
-    django 介绍 <web_dev/django>
-    Sphinx 教程 <web_dev/sphinx>
+    web_dev/django
+    web_dev/sphinx
 
 .. toctree::
     :maxdepth: 1
     :caption: 语法规范
 
-    Markdown 规范 <syntax/markdown>
-    reStructuredText 规范 <syntax/rest>
-    Sphinx reStructuredText 规范 <syntax/sphinx-rest>
+    syntax/markdown
+    syntax/rest
+    syntax/sphinx-rest
