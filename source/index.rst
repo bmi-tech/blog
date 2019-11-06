@@ -24,5 +24,6 @@ BMI 技术博客
     :caption: 语法规范
 
     syntax/markdown
+    syntax/quick-rest
     syntax/rest
     syntax/sphinx-rest
