@@ -1,9 +1,8 @@
 # Sphinx 教程
 
 ```text
-题目：Sphinx 教程
-作者：kiki
-日期：2019/11/1
+作者: kiki
+日期: 2019/11/1
 ```
 
 文档采用 [reStructuredText](http://docutils.sourceforge.net/docs/user/rst/quickstart.html) 语法。
