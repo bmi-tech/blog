@@ -42,6 +42,34 @@ sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 2
 sudo update-alternatives --config pip
 ```
 
+#### 1.2.1 配置 pip 安装源
+
+国内的一些安装源：
+
+```text
+阿里云             http://mirrors.aliyun.com/pypi/simple/
+豆瓣               http://pypi.douban.com/
+中国科学技术大学    http://pypi.mirrors.ustc.edu.cn/simple/
+清华               https://pypi.tuna.tsinghua.edu.cn/simple
+华中理工大学        http://pypi.hustunique.com/
+山东理工大学        http://pypi.sdutlinux.org/
+```
+
+方法一：临时手动指定源。每次安装命令行指定源
+
+```sh
+# -i 指定安装源
+pip install module_name -i http://mirrors.aliyun.com/pypi/simple/
+```
+
+方法二：将源写在配置文件。在用户目录下创建配置文件(文件或文件夹不存在则创建)。Windows 下是 `C:\Users\UserName\pip\pip.ini`，Linux 下是 `~/.pip/pip.conf`。
+
+```text
+[global]
+trusted-host=mirrors.aliyun.com
+index-url=http://mirrors.aliyun.com/pypi/simple/
+```
+
 ### 1.3 配置 Sphinx
 
 ```sh

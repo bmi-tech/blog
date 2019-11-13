@@ -31,7 +31,9 @@
 
 ### 本地环境
 
-依赖：基于 Python3 环境构建, 需要使用 Sphinx 库生成, 同时需要安装相应插件
+依赖：基于 Python3 环境构建, 需要使用 Sphinx 库生成, 同时需要安装相应插件。
+
+Python 和 Pip 环境配置和安装超时等问题可参考 [Sphinx 教程](source/web_dev/sphinx.md) 相关章节了解详细信息。
 
 ```sh
 pip3 install sphinx sphinx-autobuild sphinx_rtd_theme recommonmark pypandoc
