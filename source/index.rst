@@ -21,6 +21,12 @@ BMI 技术博客
 
 .. toctree::
     :maxdepth: 1
+    :caption: 工具学习
+
+    util/cmake
+
+.. toctree::
+    :maxdepth: 1
     :caption: 语法规范
 
     syntax/markdown
