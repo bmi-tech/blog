@@ -24,6 +24,7 @@ BMI 技术博客
     :caption: 工具学习
 
     util/cmake
+    util/cookie
 
 .. toctree::
     :maxdepth: 1
