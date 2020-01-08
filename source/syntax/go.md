@@ -631,40 +631,36 @@ x: y: new store: the error
 
 ### BMI 错误信息添加上下文
 
-在添加上下文信息时建议使用```[fileName-funcName-{filed1:value1,filed2:value2}]```并使用`github.com/pkg/errors`包的`Wrapf`方法进行包装,方便搜索及解析原始错误信息。例如:
+在添加上下文信息时建议使用 `[fileName-funcName-{filed1:value1, filed2:value2}]`，
+并使用 `github.com/pkg/errors` 包的 `Wrapf` 方法进行包装,方便搜索及解析原始错误信息。
+
+例如:
+
 <table>
 <thead><tr><th>Bad</th><th>Good</th></tr></thead>
 <tbody>
 <tr><td>
 
 ```go
-s, err := db.Insert(subject)
+s, err := db.Insert(book)
 if err != nil {
-    return errors.Wrapf(err,"subject createSubject Title:%s,Author:%s insert subject","a subject","dave")
+  return errors.Wrapf(err,
+    "book newBook Title:%s insert book",
+    book.Title)
 }
 ```
 
 </td><td>
 
 ```go
-s, err := db.Insert(subject)
+s, err := db.Insert(book)
 if err != nil {
-    return errors.Wrapf(err,"[subject-createSubject-Title:%s,Author:%s}] insert subject","a subject","dave")
+  return errors.Wrapf(err,
+    "[book-newBook-{Title:%s}] insert book",
+    book.Title)
 }
 ```
 
-<tr><td>
-
-```txt
-subject createSubject Title:a subject,Author:dave insert subject:  connnect db error
-```
-
-</td><td>
-
-```txt
-[subject-createSubject-{Title:a subject,Author:dave}] insert subject:  connnect db error
-```
-</td></tr>
 </tbody></table>
 
 ### 处理类型断言失败
@@ -1249,7 +1245,7 @@ import (
 
 ### BMI 变量及常量命名等
 
-golang推荐使用驼峰命名法来命名变量，常量，方法及结构体等
+golang 推荐使用驼峰命名法来命名变量，常量，方法及结构体等。
 
 ### 导入别名
 
@@ -1296,7 +1292,7 @@ import (
 
 ### BMI receiver 命名
 
-- golang 中存在receiver 的概念 receiver 名称应该尽量保持一致，并尽量简略。避免this, super，等其他语言的一些语义。
+- golang 中存在receiver 的概念 receiver 名称应该尽量保持一致，并尽量简略。避免this, super, self 等其他语言的一些语义。
 - 对同一结构体指针与值的接受者名称尽量统一。
 
 <table>
