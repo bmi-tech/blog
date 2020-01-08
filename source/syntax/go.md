@@ -178,7 +178,6 @@ func (m *SMap) Get(k string) string {
 
 </td></tr>
 
-</tr>
 <tr>
 <td>嵌入到非导出类型或者需要实现 Mutex 接口的类型。</td>
 <td>对于导出类型，将 mutex 作为私有成员变量。</td>
