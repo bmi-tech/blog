@@ -30,6 +30,7 @@ BMI 技术博客
     :maxdepth: 1
     :caption: 语法规范
 
+    syntax/cpp
     syntax/go
     syntax/markdown
     syntax/quick-rest
