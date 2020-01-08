@@ -14,6 +14,14 @@ BMI 技术博客
 
 .. toctree::
     :maxdepth: 1
+    :caption: 合作开发
+
+    collaborate-dev/checklist(to_be_update)
+    collaborate-dev/code_review
+    collaborate-dev/pull request
+
+.. toctree::
+    :maxdepth: 1
     :caption: web 开发
 
     web_dev/django
