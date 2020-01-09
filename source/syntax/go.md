@@ -571,6 +571,29 @@ if err := foo.Open("foo"); err != nil {
 }
 ```
 
+### BMI 日志信息添加上下文建议
+在添加上下文信息时建议使用 `信息标识(信息) 信息标识2(信息2)` 的格式，信息之间用空格隔开。例如 `url(sdc/mms/book)` 。
+
+<table>
+<thead><tr><th>Bad</th><th>Good</th></tr></thead>
+<tbody>
+<tr><td>
+
+```go
+    logv.Infof("book newBook: url: %v",book.Title)
+```
+
+</td><td>
+
+```go
+    logv.Infof("book newBook: url(%v)",book.Title)
+```
+
+</td></tr>
+</tbody></table>
+
+下边的 `Error` 封装中也推荐参考日志信息样式。
+
 ### Error 封裝
 
 一个函数/方法调用失败时，有三种主要的错误传播方式：
@@ -627,40 +650,6 @@ x: y: new store: the error
 
   [`"pkg/errors".Cause`]: https://godoc.org/github.com/pkg/errors#Cause
   [Don't just check errors, handle them gracefully]: https://dave.cheney.net/2016/04/27/dont-just-check-errors-handle-them-gracefully
-
-### BMI 错误信息添加上下文
-
-在添加上下文信息时建议使用 `[fileName-funcName-{filed1:value1, filed2:value2}]`，
-并使用 `github.com/pkg/errors` 包的 `Wrapf` 方法进行包装,方便搜索及解析原始错误信息。
-
-例如:
-
-<table>
-<thead><tr><th>Bad</th><th>Good</th></tr></thead>
-<tbody>
-<tr><td>
-
-```go
-s, err := db.Insert(book)
-if err != nil {
-  return errors.Wrapf(err,
-    "book newBook Title:%s insert book",
-    book.Title)
-}
-```
-
-</td><td>
-
-```go
-s, err := db.Insert(book)
-if err != nil {
-  return errors.Wrapf(err,
-    "[book-newBook-{Title:%s}] insert book",
-    book.Title)
-}
-```
-
-</tbody></table>
 
 ### 处理类型断言失败
 
