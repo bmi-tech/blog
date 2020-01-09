@@ -580,13 +580,13 @@ if err := foo.Open("foo"); err != nil {
 <tr><td>
 
 ```go
-    logv.Infof("book newBook: url: %v",book.Title)
+logv.Infof("book newBook: url: %v",book.Title)
 ```
 
 </td><td>
 
 ```go
-    logv.Infof("book newBook: url(%v)",book.Title)
+logv.Infof("book newBook: url(%v)",book.Title)
 ```
 
 </td></tr>
