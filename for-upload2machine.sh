@@ -10,5 +10,5 @@ expect ".*'s password: "
 set timeout 100
 send "$machinePWD\r"
 expect 100%
-set timeout 3
+set timeout 60
 expect eof
