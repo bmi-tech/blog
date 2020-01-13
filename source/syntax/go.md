@@ -572,6 +572,7 @@ if err := foo.Open("foo"); err != nil {
 ```
 
 ### BMI 日志信息添加上下文建议
+
 在添加上下文信息时建议使用 `信息标识(信息) 信息标识2(信息2)` 的格式，信息之间用空格隔开。例如 `url(sdc/mms/book)` 。
 
 <table>
@@ -1280,8 +1281,9 @@ import (
 
 ### BMI receiver 命名
 
-- golang 中存在receiver 的概念 receiver 名称应该尽量保持一致，并尽量简略。避免this, super, self 等其他语言的一些语义。
+- golang 中存在receiver 的概念 receiver 名称应该尽量保持一致，并尽量简略。避免 this, super, self 等其他语言的一些语义。
 - 对同一结构体指针与值的接受者名称尽量统一。
+- 最常用的方法是取类型名称的首字母，比如 Point 的 p。
 
 <table>
 <thead><tr><th>Bad</th><th>Good</th></tr></thead>
