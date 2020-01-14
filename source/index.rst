@@ -22,6 +22,12 @@ BMI 技术博客
 
 .. toctree::
     :maxdepth: 1
+    :caption: 文档模板
+
+    doc-template/changelog
+
+.. toctree::
+    :maxdepth: 1
     :caption: web 开发
 
     web_dev/django
