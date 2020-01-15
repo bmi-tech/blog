@@ -50,3 +50,9 @@ BMI 技术博客
     syntax/quick-rest
     syntax/rest
     syntax/sphinx-rest
+
+.. toctree::
+    :maxdepth: 1
+    :caption: 文档管理
+
+    showdoc/showdoc
