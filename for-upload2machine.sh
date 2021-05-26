@@ -2,7 +2,7 @@
 set timeout 3
 set machineURL [lindex $argv 0]
 set machinePWD [lindex $argv 1]
-spawn /bin/bash -c "scp -r build/html/* $machineURL"
+spawn /bin/bash -c "scp -P 23 -r build/html/* $machineURL"
 expect ".*continue connecting (yes/no)?"
 send "yes\r"
 expect "Warning:.*"
